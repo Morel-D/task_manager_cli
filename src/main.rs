@@ -1,4 +1,4 @@
-// mod task;
+mod task;
 use std::io;
 
 fn main() {
@@ -16,14 +16,14 @@ fn main() {
 
     let slice = input.trim().parse::<i32>().unwrap();
 
-    match slice {
-        1 => println!("Add task"),
-        2 => println!("List Task"),
-        3 => println!("Mark as done"),
-        4 => println!("Delete Task"),
-        5 => println!("Exit"),
-        _ => println!("Nothing"),
 
-    }
+        match slice {
+            1 => task::add_task(),
+            2 => task::list_task(),
+            3 => task::done_task(),
+            4 => task::delete_task(),
+            5 => println!("Exit"),
+            _ => println!("Nothing"),
+        }
 
 }
